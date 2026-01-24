@@ -1,0 +1,52 @@
+version: 0.0.1
+type: plugin
+author: lfenghx
+name: skill
+label:
+  en_US: Skill_Agent
+  ja_JP: Skill_Agent
+  zh_Hans: Skill_Agent
+  pt_BR: Skill_Agent
+description:
+  en_US: Skill_Agent is an Agent plugin that can execute tasks based on the Skill progressive disclosure mode.
+  ja_JP: Skill_Agent は、Skill 進化的披露モードに基づいてタスクを実行できる Agent プラグインです。
+  zh_Hans: 可基于Skill渐进式披露模式执行任务的Agent插件
+  pt_BR: Skill_Agent é um plugin de Agent que pode executar tarefas com base no modo de divulgação progressiva de Skill.
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 104857600
+plugins:
+  tools:
+    - provider/skill.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-01-22T14:14:33.3888065+08:00
+privacy: PRIVACY.md
+verified: false

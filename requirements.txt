@@ -1,0 +1,14 @@
+dify_plugin>=0.4.0,<0.7.0
+pillow>=10.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+reportlab>=4.0.0
+fonttools>=4.50.0
+opencv-python>=4.8.0
+PyYAML>=6.0.0
+requests>=2.31.0
+Pandas>=2.1.0
+python-docx>=1.1.0
+PyPDF2>=3.0.0
+openpyxl>=3.1.0
+

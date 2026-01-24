@@ -1,0 +1,49 @@
+identity:
+  name: "tm"
+  author: "lfenghx"
+  label:
+    en_US: "skill manager"
+    zh_Hans: "技能管理"
+    pt_BR: "skill manager"
+    ja_JP: "skill manager"
+description:
+  human:
+    en_US: "Manage local skill packages (add/delete/list/download)."
+    zh_Hans: "管理本地 skills 技能包：新增/删除/查看/下载"
+    pt_BR: "Manage local skill packages (add/delete/list/download)."
+    ja_JP: "Manage local skill packages (add/delete/list/download)."
+  llm: "管理本地 skills 技能包：新增/删除/查看/下载"
+parameters:
+  - name: command
+    type: string
+    required: true
+    label:
+      en_US: Command
+      zh_Hans: 命令
+      pt_BR: Command
+      ja_JP: コマンド
+    human_description:
+      en_US: "Supported: 查看技能、新增技能、删除技能N、下载技能N"
+      zh_Hans: "支持：查看技能、新增技能、删除技能N、下载技能N"
+      pt_BR: "Supported: 查看技能、新增技能、删除技能N、下载技能N"
+      ja_JP: "Supported: 查看技能、新增技能、删除技能N、下载技能N"
+    llm_description: "支持：查看技能、新增技能、删除技能N、下载技能N"
+    form: llm
+  - name: files
+    type: files
+    required: false
+    label:
+      en_US: Zip files
+      zh_Hans: Zip压缩包
+      pt_BR: Zip files
+      ja_JP: Zipファイル
+    human_description:
+      en_US: "Zip package(s) for 新增技能."
+      zh_Hans: "新增技能时上传 zip 压缩包（可多选）"
+      pt_BR: "Zip package(s) for 新增技能."
+      ja_JP: "新增技能 用の zip（複数可）"
+    llm_description: "新增技能时上传 zip 压缩包（可多选）"
+    form: form
+extra:
+  python:
+    source: tools/TM.py

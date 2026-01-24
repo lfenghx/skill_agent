@@ -1,0 +1,101 @@
+identity:
+  name: "skill"
+  author: "lfenghx"
+  label:
+    en_US: "skill"
+    zh_Hans: "skill"
+    pt_BR: "skill"
+    ja_JP: "skill"
+description:
+  human:
+    en_US: "可基于Skill渐进式披露模式执行任务的Agent插件"
+    zh_Hans: "可基于Skill渐进式披露模式执行任务的Agent插件"
+    pt_BR: "可基于Skill渐进式披露模式执行任务的Agent插件"
+    ja_JP: "可基于Skill渐进式披露模式执行任务的Agent插件"
+  llm: "可基于Skill渐进式披露模式执行任务的Agent插件"
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+      ja_JP: クエリ文字列
+    human_description:
+      en_US: "可基于Skill渐进式披露模式执行任务的Agent插件"
+      zh_Hans: "可基于Skill渐进式披露模式执行任务的Agent插件"
+      pt_BR: "可基于Skill渐进式披露模式执行任务的Agent插件"
+      ja_JP: "可基于Skill渐进式披露模式执行任务的Agent插件"
+    llm_description: "可基于Skill渐进式披露模式执行任务的Agent插件"
+    form: llm
+
+  - name: model
+    type: model-selector
+    scope: llm
+    required: true
+    label:
+      en_US: Model
+      zh_Hans: 大模型
+      pt_BR: Model
+      ja_JP: モデル
+    human_description:
+      en_US: Select an LLM to run this tool.
+      zh_Hans: 选择用于运行本工具的大模型
+      pt_BR: Select an LLM to run this tool.
+      ja_JP: このツールを実行する LLM を選択します
+    llm_description: Select an LLM to run this tool.
+    form: form
+
+  - name: max_steps
+    type: number
+    required: false
+    default: 8
+    label:
+      en_US: Max steps
+      zh_Hans: 执行轮数
+      pt_BR: Max steps
+      ja_JP: 最大ステップ
+    human_description:
+      en_US: Max reasoning/tool steps inside one call.
+      zh_Hans: 单次调用内部最多执行多少轮“思考/调用技能”
+      pt_BR: Max reasoning/tool steps inside one call.
+      ja_JP: 1回の呼び出し内での最大ステップ数
+    llm_description: Max reasoning/tool steps inside one call.
+    form: form
+
+  - name: memory_turns
+    type: number
+    required: false
+    default: 6
+    label:
+      en_US: Memory turns
+      zh_Hans: 记忆窗口
+      pt_BR: Memory turns
+      ja_JP: メモリターン
+    human_description:
+      en_US: How many recent turns to keep during the run.
+      zh_Hans: 单次调用内部保留最近多少轮上下文
+      pt_BR: How many recent turns to keep during the run.
+      ja_JP: 実行中に保持する直近ターン数
+    llm_description: How many recent turns to keep during the run.
+    form: form
+
+  - name: system_prompt
+    type: string
+    required: false
+    label:
+      en_US: System prompt
+      zh_Hans: 系统提示词
+      pt_BR: System prompt
+      ja_JP: システムプロンプト
+    human_description:
+      en_US: Override the default system prompt.
+      zh_Hans: 覆盖默认系统提示词（可不填）
+      pt_BR: Override the default system prompt.
+      ja_JP: デフォルトのシステムプロンプトを上書きします
+    llm_description: Override the default system prompt.
+    form: form
+extra:
+  python:
+    source: tools/skill.py
