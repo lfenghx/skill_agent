@@ -12,8 +12,8 @@ description:
   ja_JP: Skill_Agent は、Skill 進化的披露モードに基づいてタスクを実行できる Agent プラグインです。
   zh_Hans: 可基于Skill渐进式披露模式执行任务的Agent插件
   pt_BR: Skill_Agent é um plugin de Agent que pode executar tarefas com base no modo de divulgação progressiva de Skill.
-icon: icon.svg
-icon_dark: icon-dark.svg
+icon: skill.svg
+icon_dark: skill.svg
 resource:
   memory: 268435456
   permission:
