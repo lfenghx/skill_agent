@@ -1,7 +1,7 @@
 ## Skill Agent
 
 **作者：** lfenghx  
-**版本：** 0.0.2
+**版本：** 0.0.3
 **类型：** Tool（工具插件）
 
 ### 简介
@@ -49,6 +49,7 @@ Skill Agent 是一个基于 “Skill 渐进式披露（Progressive Disclosure）
 
 ### 更新历史
 
+- 0.0.3：支持Agent流式输出，支持Agent跨轮次交互式对话，支持node.js脚本运行，提升Agent运行稳定性
 - 0.0.2：支持Agent文件上传，解析，支持依赖自行安装
 - 0.0.1：实现技能管理，按渐进式披露方式工作的通用型Agent
 
