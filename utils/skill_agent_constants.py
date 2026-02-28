@@ -4,5 +4,5 @@ SESSION_DIR_KEY_PREFIX = "skill:session_dir:"
 
 HISTORY_TRANSCRIPT_MAX_CHARS = 6000
 
-ALLOWED_COMMANDS = {"python", "pip", "node", "pandoc", "soffice", "pdftoppm", "npm", "npx", "bun", "curl", "uvx", "wget", "git"}
+ALLOWED_COMMANDS = {"python", "pip", "node", "pandoc", "soffice", "pdftoppm", "npm", "npx", "bun", "curl", "uvx", "wget", "git", "bash","uv"}
 TEMP_SESSION_PREFIX = "dify-skill-"
